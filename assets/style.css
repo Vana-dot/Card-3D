@@ -1,0 +1,100 @@
+*{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+html, body{
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: #364156 ;
+}
+
+.container{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    perspective: 90rem;
+    perspective-origin: 30% 60%;
+}
+
+.transform{
+    display: flex;
+    transform: rotateX(10deg) rotateY(15deg) rotateZ(-9deg) scale3d(1,1,-0.8) scale(1.1) translateX(50px);
+}
+.car{
+    background: url("texture.jpg") center;
+    color: #fff;
+    border-radius: 10px;
+    padding: 0px 18px;
+    width: 250px;
+    transition: 0.5s ease;
+    overflow: hidden;
+    transform: translate(0);
+
+}
+.car::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    opacity: 0.85;
+
+}
+
+.car h2{
+    text-transform: capitalize;
+}
+
+.car h4{
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-top: 48px;
+}
+
+.card1{
+    background-size: cover;
+    transform: scale(1.02);
+    margin-right: 40px;
+}
+
+.card1:hover{
+    transform: scale(1.11);
+    box-shadow: -15px 4px 28px -3px #f1001c;
+}
+.card1::before{
+    background: linear-gradient(90deg, #ef233c 0%, #0353a4 100%);
+}
+
+.card2{
+    background-size: cover;
+    transform: scale(1.01);
+    margin-right: 31px;
+}
+
+.card2:hover{
+    transform: scale(1.1);
+    box-shadow:  -15px 4px 28px -3px #0138ec;
+}
+.card2::before{
+    background: linear-gradient(90deg,#3b64eb 0%, #8035f0 100%);
+
+}
+
+.card3{
+    background-size: cover;
+}
+.card3:hover{
+    transform: scale(1.08);
+    box-shadow:  -15px 4px 28px -3px #ff9604;
+}
+.card3::before{
+    background: linear-gradient(90deg, #ff9500 0%, #d5cb0f 100%);
+
+}
+
+
+
